@@ -1,9 +1,9 @@
 name: Nightly Build
 on:
-  push:
-  workflow_dispatch:
+  push:               # May want to have push and workflow_dispatch
+  workflow_dispatch:  # Triggers to help with developing a scheduled workflow
   schedule:
-    - cron: '*/20 * * * *'
+    - cron: '*/30 * * * *'
 jobs:
   date:
     runs-on: ubuntu-latest
